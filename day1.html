@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body{
+            
+            color: rgb(0, 0, 0);
+            text-decoration: blink;
+        }
+        h1 {
+            text-align: center;
+            color:black;
+        }
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width:50%;
+            margin: auto;
+            margin-top: 5%;
+            border: 3px solid rgb(23, 214, 248);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form>
+            <label>Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label>Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+    
+            <label>Location:</label><br>
+            <select id="location" name="location" required>
+                <option value="" disabled selected>Select Location</option>
+                <option value="Salem">Salem</option>
+                <option value="Erode">Erode</option>
+                <option value="Ooty">Ooty</option>
+                <option value="Sathy">Sathy</option>
+            </select><br><br>
+    
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label><br><br>
+    
+            <label for="Skills">Skills:</label><br>
+            <input type="checkbox" id="html" name="Skills" value="html">
+            <label for="html">html</label><br>
+            <input type="checkbox" id="python" name="Skills" value="python">
+            <label for="python">python</label><br>
+            <input type="checkbox" id="java" name="Skills" value="java">
+            <label for="java">java</label><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
