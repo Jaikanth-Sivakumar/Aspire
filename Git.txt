@@ -11,7 +11,7 @@ git init
 
 cd aspire
 
-git add git.txt (or) git add .
+git add .
 
 git commit -m "added git txt"
 
