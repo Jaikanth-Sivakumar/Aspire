@@ -6,6 +6,13 @@
       "password": "change1",
       "mobile": "9361758885",
       "email": "jai@gmail.com"
+    },
+    {
+      "id": "a8cd",
+      "username": "Jaikanth",
+      "password": "Password",
+      "mobile": "1234567890",
+      "email": "user@gmail.com"
     }
   ]
 }

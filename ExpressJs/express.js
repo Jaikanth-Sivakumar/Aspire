@@ -2,8 +2,9 @@ var express=require('express');
 
 var server=express();
 
+
 server.get("/",(request,response)=>{
-    response.sendfile(__dirname, "index.html")
+    response.sendfile(__dirname, "login.html")
 })
 
 server.get("/redirect",(request,response)=>{

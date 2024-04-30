@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Reservation - Reservation Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+    <h1>Railway Reservation</h1>
+    <h2>Available Trains</h2>
+
+    <input type="text" id="filterInput" placeholder="Search trains...">
+
+    <button id="loginBtn" onclick="showLoginForm()">Login</button>
+
+    <table id="trainTable">
+        <thead>
+          <tr>
+            <th>Train Number</th><th>Train Name</th><th>Departure Place</th><th>Departure Time</th><th>Arrival Place</th><th>Arrival Time</th><th>Price</th><th>Seat Type</th><th>Available Seats</th><th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12345</td><td>Express Train</td><td>New York</td><td>08:00 AM</td><td>Los Angeles</td><td>04:00 PM</td><td>$50</td><td>Economy</td><td>50</td>
+                <td><button class="book-button" onclick="bookTrain(this)">Book Now</button></td>
+            </tr>
+            <tr>
+                <td>12346</td><td>Indian Train</td><td>Salem</td><td>08:00 AM</td><td>Chennai</td><td>04:00 PM</td><td>$50</td><td>Economy</td><td>50</td>
+                <td><button class="book-button" onclick="bookTrain(this)">Book Now</button></td>
+            </tr>
+            <tr>
+              <td>12345</td><td>Express Train</td><td>New York</td><td>08:00 AM</td><td>Los Angeles</td><td>04:00 PM</td><td>$50</td><td>Economy</td><td>50</td>
+              <td><button class="book-button" onclick="bookTrain(this)">Book Now</button></td>
+            </tr>
+            <tr>
+              <td>12346</td><td>Indian Train</td><td>Salem</td><td>08:00 AM</td><td>Chennai</td><td>04:00 PM</td><td>$50</td><td>Economy</td><td>50</td>
+              <td><button class="book-button" onclick="bookTrain(this)">Book Now</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <!-- Login form -->
+    <div id="loginForm" class="popup">
+        <div class="popup-content">
+        <span class="close" onclick="closeLoginForm()">&times;</span>
+        <h2>Login</h2>
+        <form id="loginFormContent">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <button class="book-button" type="button" onclick="login()">Login</button>
+        </form>
+        </div>
+    </div>
+
+    <!-- Book train form -->
+  <div id="bookTrainForm" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeBookTrainForm()">&times;</span>
+      <h2>Book Train</h2>
+      <form id="bookTrainFormContent">
+        <label for="numSeats">Number of Seats:</label><br>
+        <input type="number" id="numSeats" name="numSeats" min="1" required><br><br>
+        <div id="passengerDetails">
+            <button type="button" onclick="addPassengerFields()">Add Passenger Details</button>
+        </div>
+        <br><br>
+        
+      </form>
+    </div>
+  </div>
+
+  
+    <div id="ticketPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="ticketDetails"></div>
+            <button onclick="generateTicketImage()">Download Ticket</button>
+        </div>
+    </div>
+
+    <script src="Javascript for Railway.js" defer></script>
+
+
+</body>
+</html>

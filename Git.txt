@@ -11,8 +11,11 @@ git init
 
 cd aspire
 
-git add .
+git add git.txt (or) git add .
 
 git commit -m "added git txt"
 
 git push origin main
+
+
+git pull

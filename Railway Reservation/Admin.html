@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Reservation - Admin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="time"],
+    input[type="number"],
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      display: inline-block;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Railway Reservation System - Admin</h1>
+  <div class="container">
+    <h2>Add New Train</h2>
+    <form id="addTrainForm" onsubmit="addTrain(event)">
+      <label for="trainNumber">Train Number:</label>
+      <input type="number" id="trainNumber" name="trainNumber" required>
+
+      <label for="trainName">Train Name:</label>
+      <input type="text" id="trainName" name="trainName" required>
+
+      <label for="departurePlace">Departure Place:</label>
+      <input type="text" id="departurePlace" name="departurePlace" required>
+
+      <label for="departureTime">Departure Time:</label>
+      <input type="time" id="departureTime" name="departureTime" required>
+
+      <label for="arrivalPlace">Arrival Place:</label>
+      <input type="text" id="arrivalPlace" name="arrivalPlace" required>
+
+      <label for="arrivalTime">Arrival Time:</label>
+      <input type="time" id="arrivalTime" name="arrivalTime" required>
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required>
+
+      <label for="SeatType">Seat Type:</label><br>
+      <select id="SeatType" name="SeatType" required>
+        <option value="Economy">Economy</option>
+        <option value="FirstClass">First Class</option>
+      </select><br><br>
+
+      <label for="AvailableSeats">Available seats:</label>
+      <input type="number" id="AvailableSeats" name="AvailableSeats" required>
+
+      <input type="submit" value="Add Train">
+    </form>
+
+    <h2>Train List</h2>
+    <table id="trainListTable">
+      <thead>
+        <tr>
+          <th>Train Number</th>
+          <th>Train Name</th>
+          <th>Departure Place</th>
+          <th>Departure Time</th>
+          <th>Arrival Place</th>
+          <th>Arrival Time</th>
+          <th>Price</th>
+          <th>Seat type</th>
+          <th>Available Seats</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12345</td><td>Express Train</td><td>New York</td><td>08:00 AM</td><td>Los Angeles</td><td>04:00 PM</td><td>$50</td><td>Economy</td><td>50</td>
+          <td><button class="book-button" onclick="deleteTrain(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>12346</td><td>Indian Train</td><td>Salem</td><td>08:00 AM</td><td>Chennai</td><td>04:00 PM</td><td>$50</td><td>Economy</td><td>50</td>
+          <td><button class="book-button" onclick="deleteTrain(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>12345</td><td>Express Train</td><td>New York</td><td>08:00 AM</td><td>Los Angeles</td><td>04:00 PM</td><td>$50</td><td>Economy</td><td>50</td>
+          <td><button class="book-button" onclick="deleteTrain(this)">Delete</button></td>
+        </tr>
+        <tr>
+          <td>12346</td><td>Indian Train</td><td>Salem</td><td>08:00 AM</td><td>Chennai</td><td>04:00 PM</td><td>$50</td><td>Economy</td><td>50</td>
+          <td><button class="book-button" onclick="deleteTrain(this)">Delete</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function addTrain(event) {
+      event.preventDefault(); 
+      
+
+      const trainNumber = document.getElementById('trainNumber').value;
+      const trainName = document.getElementById('trainName').value;
+      const departurePlace = document.getElementById('departurePlace').value;
+      const departureTime = document.getElementById('departureTime').value;
+      const arrivalPlace = document.getElementById('arrivalPlace').value;
+      const arrivalTime = document.getElementById('arrivalTime').value;
+      const price = document.getElementById('price').value;
+      const SeatType = document.getElementById('SeatType').value;
+      const AvailableSeats = document.getElementById('AvailableSeats').value;
+      
+
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+        <td>${trainNumber}</td>
+        <td>${trainName}</td>
+        <td>${departurePlace}</td>
+        <td>${departureTime}</td>
+        <td>${arrivalPlace}</td>
+        <td>${arrivalTime}</td>
+        <td>${price}</td>
+        <td>${SeatType}</td>
+        <td>${AvailableSeats}</td>
+        <td><button onclick="deleteTrain(this)">Delete</button></td>
+      `;
+      
+
+      document.querySelector('#trainListTable tbody').appendChild(newRow);
+      
+
+      document.getElementById('trainNumber').value = '';
+      document.getElementById('trainName').value = '';
+      document.getElementById('departurePlace').value = '';
+      document.getElementById('departureTime').value = '';
+      document.getElementById('arrivalPlace').value = '';
+      document.getElementById('arrivalTime').value = '';
+      document.getElementById('price').value = '';
+      document.getElementById('SeatType').value = '';
+      document.getElementById('AvailableSeats').value = '';
+    }
+    
+    function deleteTrain(button) {
+      const row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    }
+  </script>
+</body>
+</html>
