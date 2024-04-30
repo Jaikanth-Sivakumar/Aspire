@@ -1,0 +1,18 @@
+Configure Git:
+git config --global user.name Jaikanth-Sivakumar
+git config --global user.email Jaikanthsivakumar@gmail.com
+
+git clone https://github.com/Jaikanth-Sivakumar/Aspire.git
+
+Initialize Git:
+git init
+
+//git remote add origin https://github.com/Jaikanth-Sivakumar/Aspire.git
+
+cd aspire
+
+git add git.txt (or) git add .
+
+git commit -m "added git txt"
+
+git push origin main
