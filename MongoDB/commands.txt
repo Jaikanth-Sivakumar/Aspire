@@ -1,0 +1,7 @@
+db.createCollection("employee",{capped:true,size:100000,max:100})
+
+db.employee.insertOne({_id:8, firstName:'jaikanth', lastName:'sivakumar', gender:'male', email:'jaikanth.sivakumar@aspiresys.com', salary:5000,department:{name:'Developer'}})
+
+db.employee.find()
+
+db.employee.find().pretty()

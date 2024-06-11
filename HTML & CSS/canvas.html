@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Example</title>
+</head>
+<body>
+
+
+    <canvas id="Canvas" width="500" height="300" style="border:1px solid #000000;"></canvas>
+    <script>
+        const canvas = document.getElementById('Canvas');
+        const ctx = canvas.getContext('2d');        
+
+        // Draw rectangle
+        ctx.fillStyle = "red";
+        ctx.fillRect(50, 50, 100, 100);
+
+        // Draw circle
+        ctx.beginPath();
+        ctx.arc(200, 200, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        //draw picture
+        // const img = new Image();
+        // img.onload = function() {
+        //     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        // };
+        // img.onerror = function() {
+        //     console.error('Failed to load image.');
+        // };
+
+        // img.src = 'dodge.jpg';
+    </script>
+</body>
+</html>
+

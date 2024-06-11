@@ -13,6 +13,13 @@
       "password": "Password",
       "mobile": "1234567890",
       "email": "user@gmail.com"
+    },
+    {
+      "username": "surya",
+      "password": "pass",
+      "mobile": "1234567890",
+      "email": "surya@gmail.com",
+      "id": "20-HBVN"
     }
   ]
 }

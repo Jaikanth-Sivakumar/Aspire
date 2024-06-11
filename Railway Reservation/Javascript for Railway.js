@@ -29,7 +29,7 @@ function clearUsername() {
 }
 
 window.onload = function() {
-  //clearUsername();
+  clearUsername();
   var username = localStorage.getItem('username');
   if (username) {
     var loginBtn = document.getElementById('loginBtn');
