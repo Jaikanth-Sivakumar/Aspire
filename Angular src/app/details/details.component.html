@@ -1,0 +1,18 @@
+<div class="product">
+    <img [src]="product.productImage" [alt]="product.productName">
+  
+    <div class="product-info">
+      <h1>{{ product.productName }}</h1>
+      <p><strong>Description:</strong> {{ product.productDescription }}</p>
+      <p><strong>Price:</strong> {{ product.productPrice | currency: 'INR' }}</p>
+      <ngb-rating [max]="5" [(rate)]="product.starRating" [readonly]="true"></ngb-rating>
+      <button (click)="addToCart()">Add to cart</button>
+      <mat-divider></mat-divider>
+      <p><strong>About:</strong></p>
+      <mat-list>
+        <div *ngFor="let spec of product.about" class="bullet">{{ spec }}</div>
+      </mat-list>
+    </div>
+  </div>
+  
+  

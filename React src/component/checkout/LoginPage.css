@@ -1,0 +1,102 @@
+/* Styles for the modal background */
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Styles for the modal content */
+  .login-modal-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Set a max width to avoid oversized forms */
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .login-modal h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  /* Input field styles */
+  .login-modal-content input[type="email"],
+  .login-modal-content input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Change border color on focus */
+  .login-modal-content input[type="email"]:focus,
+  .login-modal-content input[type="password"]:focus {
+    border-color: #007bff;
+  }
+  
+  /* Login button */
+  .login-modal-content button[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the login button */
+  .login-modal-content button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Error message styling */
+  .login-modal .error {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Close button styles */
+  .close-modal {
+    margin-top: 10px;
+    background-color: transparent;
+    color: #333;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+  }
+  
+  /* Animation for modal appearance */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  

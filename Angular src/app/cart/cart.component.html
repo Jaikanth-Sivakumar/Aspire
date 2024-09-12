@@ -1,0 +1,25 @@
+<div class="cart-container">
+    <h2>Your Cart</h2>
+  
+    @if(cartItems.length == 0){
+      <p>Your cart is empty.</p>
+    }
+
+    @if(cartItems.length > 0){
+      @for(item of cartItems; track item){
+        <img src={{item.productImage}} alt={{item.productName}}>
+        <div class="item-details">
+          <h3>{{item.productName}}</h3>
+          <p class="price">${{item.productPrice}}</p>
+          <button (click)="removeItem(item.id)">Remove</button>
+        </div>
+        }
+  
+      <div class="cart-summary">
+        <h3>Total: ${{ getTotalPrice() }}</h3>
+        <button (click)="clearCart()">Clear Cart</button>
+        <button>Proceed to Checkout</button>
+      </div>
+    }
+  </div>
+  

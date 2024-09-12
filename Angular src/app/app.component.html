@@ -1,0 +1,28 @@
+
+<header class="header">
+    <div class="logo">Happy Shopping</div>
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+
+    <div class="cart">
+        <div class="user">
+            <img src="https://img.freepik.com/free-vector/man-profile-cartoon_18591-58482.jpg" alt="user">&nbsp;
+        </div>
+        
+        <p>Jaikanth &nbsp;</p>  
+        <a [routerLink]="'cart'" ><img src="https://icon-library.com/images/shopping-cart-png-icon/shopping-cart-png-icon-1.jpg" alt="Cart"></a>
+        
+        <div class="cart-badge"></div>
+    </div>
+</header>
+
+
+<router-outlet></router-outlet>

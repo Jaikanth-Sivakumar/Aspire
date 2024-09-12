@@ -1,0 +1,232 @@
+
+.product-container {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+  min-height: calc(100vh - 70px);
+  --image-wrapper-width: 45%;
+}
+
+.product-img_wrapper {
+  background-color: #fff;
+  border-radius: 32px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: clamp(260px, 80%, 380px);
+  width: var(--image-wrapper-width);
+  
+}
+
+.product-img_wrapper .slick-dots {
+  bottom: -50px;
+}
+
+.product-img_wrapper img { 
+  width: 40%;
+  transition: all 0.2s;
+  border-radius: 0px;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+
+.product-info {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: calc(100% - var(--image-wrapper-width));
+  padding-top: 40px;
+}
+.product-name {
+  font-size: 3rem;
+}
+.product-price {
+  font-size: 2.2rem;
+}
+.product-description {
+  font-size: 1.7rem;
+  color: #666;
+}
+.product-description::first-letter {
+  text-transform: capitalize;
+}
+.product-cart_btn {
+  width: 20rem;
+  padding: 1.4rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.product-cart_btn:hover {
+  scale: 1.01;
+  background-color: #1a1a1a;
+}
+
+@media (max-width: 800px) {
+  .product-container {
+    --image-wrapper-width: 80%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-img_wrapper::after {
+    border-radius: 18px;
+  }
+
+  .product-info {
+    width: 100%;
+    padding-top: 0px;
+  }
+  .product-name {
+    font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+  }
+  .product-price {
+    font-size: clamp(1.4rem, 2vw + 1rem, 2.2rem);
+  }
+  .product-description {
+    font-size: clamp(1.3rem, 1vw + 1rem, 2rem);
+  }
+  .product-cart_btn {
+    font-size: 1.5rem;
+    padding: 1.2rem 0px;
+    width: 12rem;
+  }
+}
+
+/*
+
+.product-container {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  min-height: calc(100vh - 70px);
+  --image-wrapper-width: 50%;  Adjusted to 50% for smaller image container 
+  padding: 20px;
+  box-sizing: border-box;  Ensure padding and border are included in total width and height 
+}
+
+.product-img_wrapper {
+  background-color: #fff;
+  border-radius: 20px;
+  height: clamp(200px, 40%, 100px); /* Reduced height 
+  width: 40%;
+  height: auto;  
+  align-items: center; /* Center content vertically 
+  justify-content: center; /* Center content horizontally 
+  position: relative;/*  To position dots 
+  overflow: hidden;/*  Ensure no overflow of images 
+  padding: 20px; /* Optional padding around the image 
+
+  
+}
+
+.product-img_wrapper .slick-dots {
+  bottom: -20px; /* Adjust as needed for visibility 
+  text-align: center;
+}
+
+.product-img_wrapper .slick-dots li button:before {
+  font-size: 10px; /* Adjust size of dots 
+  color: #000; /* Dot color 
+}
+
+.product-img_wrapper img { 
+  width: auto; /* Allow image to maintain its natural width 
+  height: 100%; /* Scale the height to fit the container 
+  max-width: 100%; /* Ensure the image does not overflow the container 
+  object-fit: contain; /* Ensure the full image is visible without cropping 
+  display: block; /* Remove any extra space below image 
+  border-radius: 0px;
+}
+
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: calc(100% - var(--image-wrapper-width));
+  padding-top: 40px;
+}
+
+.product-name {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.product-description {
+  font-size: 1.7rem;
+  color: #666;
+}
+
+.product-description::first-letter {
+  text-transform: capitalize;
+}
+
+.product-cart_btn {
+  width: 20rem;
+  padding: 1.4rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.product-cart_btn:hover {
+  transform: scale(1.02); 
+  background-color: #1a1a1a;
+}
+
+@media (max-width: 800px) {
+  .product-container {
+    --image-wrapper-width: 80%;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .product-img_wrapper {
+    height: 50%;
+  }
+
+  .product-img_wrapper img {
+    margin-top: 5%;
+  }
+
+  .product-info {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .product-name {
+    font-size: clamp(2rem, 3vw + 1rem, 2.8rem);
+  }
+
+  .product-price {
+    font-size: clamp(1.4rem, 2vw + 1rem, 2.2rem);
+  }
+
+  .product-description {
+    font-size: clamp(1.3rem, 1vw + 1rem, 2rem);
+  }
+
+  .product-cart_btn {
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+    width: 12rem;
+  }
+}
+*/

@@ -1,0 +1,111 @@
+
+.price-filter_wrapper {
+  width: 20%;
+  padding: 0px 20px;
+}
+
+.price-filter_wrapper label {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.price-filter_wrapper h4{
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 4px;
+  pointer-events: none;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+
+/* PriceFilter.css 
+.price-filter_wrapper {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.price-filter_wrapper h4 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  text-align: left;  /*Center the heading 
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+/* SelectCategory.css 
+.select-category_container {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.select-category_container h4 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: 4px;
+  text-align: left; /* Center the heading 
+  cursor: pointer;
+}
+
+.category-option {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  font-size: 1.4rem;
+  padding-top: 10px;
+  justify-content: center; /* Center the checkboxes and labels 
+}
+
+.category-option label {
+  cursor: pointer;
+}
+
+.select-category_container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns checkboxes in the center 
+}
+
+.select-category_container div.open {
+  display: flex;
+}
+
+/* Responsive Design 
+@media (max-width: 800px) {
+  .price-filter_wrapper, .select-category_container {
+    width: 100%;
+  }
+}
+*/
